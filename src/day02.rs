@@ -92,8 +92,7 @@ pub fn print_values() -> Result<Vec<(u32, u32, u32)>, Error> {
     let mut vec: Vec<(u32, u32, u32)> = Vec::new();
     for noun in 0..99 {
         for verb in 0..99 {
-                vec.push(solve_opcode(instructions.clone(), noun, verb));
-            
+            vec.push(solve_opcode(instructions.clone(), noun, verb));
         }
     }
     Ok(vec)
