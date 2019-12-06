@@ -13,7 +13,7 @@ pub fn part1() -> Result<u64, Error> {
     let mut grid = vec![vec![(0u8, 0u8); size.0 as usize]; size.1 as usize];
     let mut intersections: Vec<(usize, usize)> = Vec::new();
     f.read_line(&mut buf_1)?;
-    let default_cursor = (size.0/2, size.1/2);
+    let default_cursor = (size.0 / 2, size.1 / 2);
     let wire_1: Vec<&str> = buf_1[..buf_1.len() - 1].split(',').collect();
     let mut cursor = default_cursor;
     for instruction in wire_1 {

@@ -4,7 +4,10 @@ use std::io::Error;
 mod day01;
 mod day02;
 mod day03;
+mod day04;
+mod day05;
 
+extern crate itertools;
 fn main() -> Result<(), Error> {
     let args: Vec<String> = env::args().collect();
     match args[1].as_ref() {
@@ -21,6 +24,10 @@ fn main() -> Result<(), Error> {
         "day3" | "day03" => {
             println!("{}", day03::part1()?);
             println!("{}", day03::part2()?);
+        }
+        "day4" | "day04" => {
+            println!("{}", day04::part1()?);
+            println!("{}", day04::part2()?);
         }
         _ => println!("{}", "invalid argument"),
     }
