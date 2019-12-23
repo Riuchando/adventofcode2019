@@ -109,7 +109,7 @@ fn solve_opcode(instructions: Vec<i32>, input: u32) -> i32 {
                     index += 4;
                 }
                 3 => {
-                    println!("failed parse {:?}", opcode_parse);
+                    // println!("failed parse {:?}", opcode_parse);
                     index += 2;
                 }
                 4 => {
@@ -219,7 +219,7 @@ fn solve_big_opcode(instructions: Vec<i32>, input: u32) -> i32 {
         } else {
             // let first_index: usize = instructions[index + 1] as usize;
             let opcode_parse = parse_digits(opcode as i32);
-            println!("{:?}", opcode_parse);
+            // println!("{:?}", opcode_parse);
             match opcode_parse.4 {
                 1 => {
                     let first_value = if opcode_parse.2 == 0 {
@@ -318,11 +318,6 @@ fn solve_big_opcode(instructions: Vec<i32>, input: u32) -> i32 {
                         instructions[instructions[index + 2] as usize]
                     } else {
                         instructions[index + 2]
-                    };
-                    let third_value = if opcode_parse.0 == 0 {
-                        instructions[instructions[index + 3] as usize]
-                    } else {
-                        instructions[index + 3]
                     };
                     let third_index: usize = instructions[index + 3] as usize;
                     if first_value < second_value {

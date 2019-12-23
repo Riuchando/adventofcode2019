@@ -6,6 +6,7 @@ mod day02;
 mod day03;
 mod day04;
 mod day05;
+mod day06;
 
 extern crate itertools;
 fn main() -> Result<(), Error> {
@@ -30,8 +31,12 @@ fn main() -> Result<(), Error> {
             println!("{}", day04::part2()?);
         }
         "day5" | "day05" => {
-            // println!("{}", day05::part1()?);
+            println!("{}", day05::part1()?);
             println!("{}", day05::part2()?);
+        }
+        "day6" | "day06" => {
+            println!("{}", day06::part1()?);
+            // println!("{}", day05::part2()?);
         }
         _ => println!("{}", "invalid argument"),
     }
